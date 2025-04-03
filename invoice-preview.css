@@ -1,0 +1,278 @@
+.invoice-preview {
+    background: white;
+    padding: 2rem;
+    border-radius: 18px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid #E5E5E5;
+}
+
+.invoice-preview:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.company-info h2 {
+    font-size: 1.5rem;
+    color: #1D1D1F;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.invoice-meta {
+    text-align: right;
+}
+
+.invoice-meta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #1D1D1F;
+    font-weight: 500;
+}
+
+.invoice-number, .invoice-date {
+    margin-bottom: 0.5rem;
+    color: #86868B;
+}
+
+.preview-body {
+    margin-bottom: 2rem;
+}
+
+.buyer-info {
+    margin-bottom: 2rem;
+}
+
+.buyer-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1D1D1F;
+    font-weight: 500;
+}
+
+.address {
+    line-height: 1.6;
+    color: #86868B;
+}
+
+.items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.items-table th {
+    text-align: left;
+    padding: 0.75rem;
+    background: #F5F5F7;
+    border-bottom: 1px solid #E5E5E5;
+    font-weight: 500;
+    color: #1D1D1F;
+}
+
+.items-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #E5E5E5;
+    color: #515154;
+}
+
+.items-table tr:last-child td {
+    border-bottom: none;
+}
+
+.tax-summary {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.tax-summary th, .tax-summary td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.tax-summary th {
+    background: #F5F5F7;
+    font-weight: 500;
+    color: #1D1D1F;
+}
+
+.tax-summary tr:last-child th, 
+.tax-summary tr:last-child td {
+    border-bottom: none;
+    font-weight: 500;
+}
+
+.total-amount {
+    text-align: right;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1D1D1F;
+}
+
+.bank-details {
+    margin-bottom: 2rem;
+}
+
+.bank-details h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1D1D1F;
+    font-weight: 500;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+}
+
+.qr-code-container {
+    padding: 1rem;
+    background: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+}
+
+.footer-note {
+    font-size: 0.9rem;
+    color: #86868B;
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #E5E5E5;
+}
+
+.signature {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+}
+
+.signature p {
+    text-align: center;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 0.5rem;
+    width: 200px;
+    color: #515154;
+}
+
+.additional-notes h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #1D1D1F;
+    font-weight: 500;
+}
+
+.additional-notes p {
+    color: #515154;
+    line-height: 1.6;
+}
+
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    .invoice-preview {
+        width: 100%;
+        padding: 0.5cm;
+        box-shadow: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        border: none;
+    }
+    
+    .preview-header {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0.5cm;
+        padding-bottom: 0.3cm;
+    }
+    
+    .company-info, .invoice-meta {
+        width: 100%;
+        margin-bottom: 0.5cm;
+    }
+    
+    .items-table, .tax-summary {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 0.5cm;
+        page-break-inside: avoid;
+    }
+    
+    .items-table th, 
+    .items-table td, 
+    .tax-summary th, 
+    .tax-summary td {
+        padding: 0.2cm 0.3cm;
+        font-size: 10px;
+    }
+    
+    .items-table th {
+        white-space: nowrap;
+    }
+    
+    .total-amount {
+        margin-bottom: 0.3cm;
+        font-size: 11px;
+    }
+    
+    .bank-details {
+        margin-bottom: 0.3cm;
+    }
+    
+    .footer-note {
+        margin-top: 0.3cm;
+        padding-top: 0.2cm;
+        font-size: 9px;
+    }
+    
+    .signature {
+        margin-top: 0.5cm;
+    }
+    
+    .qr-code-container {
+        width: 2cm;
+        height: 2cm;
+        padding: 0.2cm;
+    }
+    
+    table {
+        page-break-inside: auto;
+    }
+    
+    tr {
+        page-break-inside: avoid;
+        page-break-after: auto;
+    }
+    
+    * {
+        max-width: 100%;
+        word-wrap: break-word;
+    }
+}
