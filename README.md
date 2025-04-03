@@ -1,0 +1,1 @@
+This Invoice Generator is a simple and efficient tool to create professional invoices for your business or personal use. It allows you to input client details, itemize services or products, add taxes, and generate a clean, printable invoice in PDF.
